@@ -1,0 +1,2160 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/20/2021 11:07:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-6AL6FIBV"
+  DTS:CreatorName="LAPTOP-6AL6FIBV\AB"
+  DTS:DTSID="{392169E4-2206-483F-9F02-C4F6D9657519}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="6153"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{CEA4CEF9-233A-4E28-B37D-A8895891EF74}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[customerChurn]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3F64FBEE-EF8E-441C-8450-D150C1D35255}"
+      DTS:ObjectName="customerChurn">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="6153"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\AB\OneDrive\Documents\Datasets\Customer_Churn_ECommerce.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{B950FC82-AA66-4D68-B825-9A01E4DD3A07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn"
+              DTS:DTSID="{0BFBEC1E-47DD-4F9D-94F0-868798D261C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{F4AF4921-5410-45CE-8354-62C8C919AB12}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferredLoginDevice"
+              DTS:DTSID="{3691A5E3-B43B-4306-8D19-7B1CC4E5BF94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CityTier"
+              DTS:DTSID="{946E84F9-FED4-490C-BC6A-19BF1DE1B666}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WarehouseToHome"
+              DTS:DTSID="{57305E48-16ED-4537-907F-529BA91D4A57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferredPaymentMode"
+              DTS:DTSID="{DF779FD1-93F3-4214-AFF4-B7D36DBC2111}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{C8FD24A9-125A-4970-8764-272729DE1AAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HourSpendOnApp"
+              DTS:DTSID="{A919B1A5-EA60-42E5-A686-64AAF7AF0D7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfDeviceRegistered"
+              DTS:DTSID="{6E2ABDFA-D87D-4E1B-BA5C-2CAB38788221}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferedOrderCat"
+              DTS:DTSID="{5C3BD9AA-8D36-4F7A-B8DD-D22F774168B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SatisfactionScore"
+              DTS:DTSID="{438B0AEA-BBDD-4566-9349-9840953F9C77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaritalStatus"
+              DTS:DTSID="{958AE565-E135-4237-9DDA-DBB0E8E72658}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfAddress"
+              DTS:DTSID="{682359F5-5570-483D-ACB7-53E6EECCACA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Complain"
+              DTS:DTSID="{9080C23C-144F-4C16-BA16-08E8BFF0585C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderAmountHikeFromlastYear"
+              DTS:DTSID="{800F5BC4-CE46-4DF7-BC40-E79415B3373C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CouponUsed"
+              DTS:DTSID="{97F16515-C871-443F-B90F-3BD05B8AFA6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderCount"
+              DTS:DTSID="{4FDB9B22-2FE7-4054-9D2D-54607D6A7EE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DaySinceLastOrder"
+              DTS:DTSID="{CEFD5C2F-605A-4548-B569-4612CD003CA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CashbackAmount"
+              DTS:DTSID="{CDF7F3C6-DFF2-4FB5-80AC-03F2AEC8D9CA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[customerChurn Data Extraction]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="customerChurn Data Extraction"
+      DTS:DTSID="{735D3B78-C88C-459C-B9FE-3A82FE7BFB13}"
+      DTS:ObjectName="customerChurn Data Extraction">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="6153"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\AB\OneDrive\Documents\Datasets\Customer_Churn_ECommerce.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{3B386483-A0D6-4D24-B873-95B2009F02C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn"
+              DTS:DTSID="{89F9E15B-C1BC-4FF6-8576-4061CAD4262F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{D68E1FAC-2248-43A2-AB1D-2F861C40F612}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferredLoginDevice"
+              DTS:DTSID="{0ACB9E66-8394-43C8-B802-B1055A0C9716}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CityTier"
+              DTS:DTSID="{8B4A701C-C5CE-425C-8111-59D30F81C3A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WarehouseToHome"
+              DTS:DTSID="{4CCE0B86-343F-4858-B2AE-1A77DC5264D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferredPaymentMode"
+              DTS:DTSID="{F90D4269-AFEA-4CEF-82F9-820749188DEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{80D2E3D6-3E77-4B08-8C73-7BFE4201D0DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HourSpendOnApp"
+              DTS:DTSID="{6BC90140-7040-4172-B979-753980500928}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfDeviceRegistered"
+              DTS:DTSID="{D3B7E2CE-88E0-463D-9CEE-BF0C5932C593}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PreferedOrderCat"
+              DTS:DTSID="{90BA0AB7-D0A4-4C4D-9AB4-710CD6DF96D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SatisfactionScore"
+              DTS:DTSID="{C455CDE3-8559-40F3-970B-7CE6359C17BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaritalStatus"
+              DTS:DTSID="{7F00D8C9-B0E7-44F2-8583-1ABA7941B41A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfAddress"
+              DTS:DTSID="{1084FCB1-3267-451A-86F6-BF6E1940264E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Complain"
+              DTS:DTSID="{F02568A5-3A97-425E-BFC6-9F9FDF956CE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderAmountHikeFromlastYear"
+              DTS:DTSID="{C624DCA7-4D7C-4098-AFC2-CAF6B0DF3D89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CouponUsed"
+              DTS:DTSID="{45D0F752-D0C9-4CD2-8D9C-431144AA19D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderCount"
+              DTS:DTSID="{9DA16B52-A113-4F2B-8CC4-5F7A19E46197}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DaySinceLastOrder"
+              DTS:DTSID="{147F43CA-F0A7-4D67-A150-7E34AF654955}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CashbackAmount"
+              DTS:DTSID="{8EE10D99-F170-429C-92CD-7842DE92956A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-6AL6FIBV\SQLEXPRESS.customerChurn]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{44E7A1C3-EFC9-41B9-B37B-56F6F7A61D59}"
+      DTS:ObjectName="LAPTOP-6AL6FIBV\SQLEXPRESS.customerChurn">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-6AL6FIBV\SQLEXPRESS;Initial Catalog=customerChurn;Integrated Security=True;Application Name=SSIS-Package-{44E7A1C3-EFC9-41B9-B37B-56F6F7A61D59}LAPTOP-6AL6FIBV\SQLEXPRESS.customerChurn;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load from CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C9479A21-0CE3-4DBF-8794-FB14FF752304}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load from CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load from CSV\Data Conversion (Transform Phase)"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion (Transform Phase)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[CustomerID]"
+                      cachedDataType="i8"
+                      cachedName="CustomerID"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[WarehouseToHome]"
+                      cachedDataType="i8"
+                      cachedName="WarehouseToHome"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[WarehouseToHome]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[NumberOfDeviceRegistered]"
+                      cachedDataType="i8"
+                      cachedName="NumberOfDeviceRegistered"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfDeviceRegistered]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[SatisfactionScore]"
+                      cachedDataType="i8"
+                      cachedName="SatisfactionScore"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[SatisfactionScore]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[OrderAmountHikeFromlastYear]"
+                      cachedDataType="cy"
+                      cachedName="OrderAmountHikeFromlastYear"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderAmountHikeFromlastYear]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[CashbackAmount]"
+                      cachedDataType="cy"
+                      cachedName="CashbackAmount"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CashbackAmount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[Churn]"
+                      cachedDataType="bool"
+                      cachedName="Churn"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Churn]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[Tenure]"
+                      cachedDataType="i8"
+                      cachedName="Tenure"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Tenure]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[CityTier]"
+                      cachedDataType="i8"
+                      cachedName="CityTier"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CityTier]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[HourSpendOnApp]"
+                      cachedDataType="i8"
+                      cachedName="HourSpendOnApp"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[HourSpendOnApp]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[NumberOfAddress]"
+                      cachedDataType="i8"
+                      cachedName="NumberOfAddress"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfAddress]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[Complain]"
+                      cachedDataType="bool"
+                      cachedName="Complain"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Complain]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[CouponUsed]"
+                      cachedDataType="bool"
+                      cachedName="CouponUsed"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CouponUsed]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[OrderCount]"
+                      cachedDataType="i8"
+                      cachedName="OrderCount"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderCount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input].Columns[DaySinceLastOrder]"
+                      cachedDataType="i8"
+                      cachedName="DaySinceLastOrder"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[DaySinceLastOrder]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCustomerID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCustomerID]"
+                      name="NewCustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CustomerID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewWarehouseToHome]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewWarehouseToHome]"
+                      name="NewWarehouseToHome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[WarehouseToHome]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfDeviceRegistered]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfDeviceRegistered]"
+                      name="NewNumberOfDeviceRegistered"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfDeviceRegistered]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewSatisfactionScore]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewSatisfactionScore]"
+                      name="NewSatisfactionScore"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[SatisfactionScore]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderAmountHikeFromlastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderAmountHikeFromlastYear]"
+                      name="NewOrderAmountHikeFromlastYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderAmountHikeFromlastYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCashbackAmount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCashbackAmount]"
+                      name="NewCashbackAmount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CashbackAmount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewChurn]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewChurn]"
+                      name="NewChurn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Churn]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewTenure]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewTenure]"
+                      name="NewTenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Tenure]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCityTier]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCityTier]"
+                      name="NewCityTier"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CityTier]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewHourSpendOnApp]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewHourSpendOnApp]"
+                      name="NewHourSpendOnApp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[HourSpendOnApp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfAddress]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfAddress]"
+                      name="NewNumberOfAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfAddress]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of Complain]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of Complain]"
+                      name="Copy of Complain"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Complain]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of CouponUsed]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of CouponUsed]"
+                      name="Copy of CouponUsed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CouponUsed]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderCount]"
+                      name="NewOrderCount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderCount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewDaySinceLastOrder]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewDaySinceLastOrder]"
+                      name="NewDaySinceLastOrder"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[DaySinceLastOrder]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load from CSV\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load from CSV\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load from CSV\Derived Column.Inputs[Derived Column Input].Columns[PreferredLoginDevice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PreferredLoginDevice"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredLoginDevice]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER](#{Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredLoginDevice]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(PreferredLoginDevice)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load from CSV\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load from CSV\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load from CSV\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load from CSV\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load from CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load from CSV\Load from CSV (Extraction Phase)"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="6153"
+              name="Load from CSV (Extraction Phase)"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load from CSV\Load from CSV (Extraction Phase).Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[customerChurn]"
+                  connectionManagerRefId="Package.ConnectionManagers[customerChurn]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Churn]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Churn]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Churn]"
+                      name="Churn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Tenure]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Tenure]"
+                      name="Tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredLoginDevice]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferredLoginDevice]"
+                      length="50"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredLoginDevice]"
+                      name="PreferredLoginDevice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CityTier]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CityTier]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CityTier]"
+                      name="CityTier"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[WarehouseToHome]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[WarehouseToHome]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[WarehouseToHome]"
+                      name="WarehouseToHome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredPaymentMode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferredPaymentMode]"
+                      length="50"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredPaymentMode]"
+                      name="PreferredPaymentMode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[HourSpendOnApp]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[HourSpendOnApp]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[HourSpendOnApp]"
+                      name="HourSpendOnApp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfDeviceRegistered]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[NumberOfDeviceRegistered]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfDeviceRegistered]"
+                      name="NumberOfDeviceRegistered"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferedOrderCat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferedOrderCat]"
+                      length="50"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferedOrderCat]"
+                      name="PreferedOrderCat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[SatisfactionScore]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[SatisfactionScore]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[SatisfactionScore]"
+                      name="SatisfactionScore"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[MaritalStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[MaritalStatus]"
+                      length="50"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[MaritalStatus]"
+                      name="MaritalStatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfAddress]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[NumberOfAddress]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfAddress]"
+                      name="NumberOfAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Complain]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Complain]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Complain]"
+                      name="Complain"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderAmountHikeFromlastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[OrderAmountHikeFromlastYear]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderAmountHikeFromlastYear]"
+                      name="OrderAmountHikeFromlastYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CouponUsed]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CouponUsed]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CouponUsed]"
+                      name="CouponUsed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[OrderCount]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderCount]"
+                      name="OrderCount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[DaySinceLastOrder]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[DaySinceLastOrder]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[DaySinceLastOrder]"
+                      name="DaySinceLastOrder"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CashbackAmount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CashbackAmount]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CashbackAmount]"
+                      name="CashbackAmount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CustomerID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Churn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferredLoginDevice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PreferredLoginDevice" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CityTier]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CityTier" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[WarehouseToHome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WarehouseToHome" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferredPaymentMode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PreferredPaymentMode" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[HourSpendOnApp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HourSpendOnApp" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[NumberOfDeviceRegistered]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NumberOfDeviceRegistered" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[PreferedOrderCat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PreferedOrderCat" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[SatisfactionScore]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SatisfactionScore" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[MaritalStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[NumberOfAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NumberOfAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[Complain]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Complain" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[OrderAmountHikeFromlastYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderAmountHikeFromlastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CouponUsed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CouponUsed" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[OrderCount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderCount" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[DaySinceLastOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DaySinceLastOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].ExternalColumns[CashbackAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CashbackAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load from CSV\Load into SQL Server (Loading Phase)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Load into SQL Server (Loading Phase)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."customer_churn_updated"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-6AL6FIBV\SQLEXPRESS.customerChurn]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-6AL6FIBV\SQLEXPRESS.customerChurn]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Churn]"
+                      cachedDataType="bool"
+                      cachedName="Churn"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Churn]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Churn]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Tenure]"
+                      cachedDataType="i8"
+                      cachedName="Tenure"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Tenure]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Tenure]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[PreferredLoginDevice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PreferredLoginDevice"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferredLoginDevice]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredLoginDevice]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[CityTier]"
+                      cachedDataType="i8"
+                      cachedName="CityTier"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CityTier]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CityTier]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[WarehouseToHome]"
+                      cachedDataType="i8"
+                      cachedName="WarehouseToHome"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[WarehouseToHome]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[WarehouseToHome]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[PreferredPaymentMode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PreferredPaymentMode"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferredPaymentMode]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferredPaymentMode]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[HourSpendOnApp]"
+                      cachedDataType="i8"
+                      cachedName="HourSpendOnApp"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[HourSpendOnApp]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[HourSpendOnApp]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NumberOfDeviceRegistered]"
+                      cachedDataType="i8"
+                      cachedName="NumberOfDeviceRegistered"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NumberOfDeviceRegistered]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfDeviceRegistered]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[PreferedOrderCat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PreferedOrderCat"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferedOrderCat]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[PreferedOrderCat]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[SatisfactionScore]"
+                      cachedDataType="i8"
+                      cachedName="SatisfactionScore"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[SatisfactionScore]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[SatisfactionScore]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[MaritalStatus]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MaritalStatus"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[MaritalStatus]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[MaritalStatus]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NumberOfAddress]"
+                      cachedDataType="i8"
+                      cachedName="NumberOfAddress"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NumberOfAddress]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[NumberOfAddress]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Complain]"
+                      cachedDataType="bool"
+                      cachedName="Complain"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Complain]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[Complain]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[OrderAmountHikeFromlastYear]"
+                      cachedDataType="cy"
+                      cachedName="OrderAmountHikeFromlastYear"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[OrderAmountHikeFromlastYear]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderAmountHikeFromlastYear]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[CouponUsed]"
+                      cachedDataType="bool"
+                      cachedName="CouponUsed"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CouponUsed]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CouponUsed]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[OrderCount]"
+                      cachedDataType="i8"
+                      cachedName="OrderCount"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[OrderCount]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[OrderCount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[DaySinceLastOrder]"
+                      cachedDataType="i8"
+                      cachedName="DaySinceLastOrder"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[DaySinceLastOrder]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[DaySinceLastOrder]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[CashbackAmount]"
+                      cachedDataType="cy"
+                      cachedName="CashbackAmount"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CashbackAmount]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CashbackAmount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[CustomerID]"
+                      cachedDataType="i8"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewCustomerID]"
+                      cachedDataType="i8"
+                      cachedName="NewCustomerID"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCustomerID]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCustomerID]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewWarehouseToHome]"
+                      cachedDataType="i8"
+                      cachedName="NewWarehouseToHome"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewWarehouseToHome]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewWarehouseToHome]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewNumberOfDeviceRegistered]"
+                      cachedDataType="i8"
+                      cachedName="NewNumberOfDeviceRegistered"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewNumberOfDeviceRegistered]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfDeviceRegistered]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewSatisfactionScore]"
+                      cachedDataType="i8"
+                      cachedName="NewSatisfactionScore"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewSatisfactionScore]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewSatisfactionScore]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewOrderAmountHikeFromlastYear]"
+                      cachedDataType="cy"
+                      cachedName="NewOrderAmountHikeFromlastYear"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewOrderAmountHikeFromlastYear]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderAmountHikeFromlastYear]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewCashbackAmount]"
+                      cachedDataType="cy"
+                      cachedName="NewCashbackAmount"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCashbackAmount]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCashbackAmount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewChurn]"
+                      cachedDataType="bool"
+                      cachedName="NewChurn"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewChurn]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewChurn]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewTenure]"
+                      cachedDataType="i8"
+                      cachedName="NewTenure"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewTenure]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewTenure]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewCityTier]"
+                      cachedDataType="i8"
+                      cachedName="NewCityTier"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCityTier]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewCityTier]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewHourSpendOnApp]"
+                      cachedDataType="i8"
+                      cachedName="NewHourSpendOnApp"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewHourSpendOnApp]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewHourSpendOnApp]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewNumberOfAddress]"
+                      cachedDataType="i8"
+                      cachedName="NewNumberOfAddress"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewNumberOfAddress]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewNumberOfAddress]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Copy of Complain]"
+                      cachedDataType="bool"
+                      cachedName="Copy of Complain"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Copy of Complain]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of Complain]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[Copy of CouponUsed]"
+                      cachedDataType="bool"
+                      cachedName="Copy of CouponUsed"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Copy of CouponUsed]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[Copy of CouponUsed]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewOrderCount]"
+                      cachedDataType="i8"
+                      cachedName="NewOrderCount"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewOrderCount]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewOrderCount]" />
+                    <inputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].Columns[NewDaySinceLastOrder]"
+                      cachedDataType="i8"
+                      cachedName="NewDaySinceLastOrder"
+                      externalMetadataColumnId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewDaySinceLastOrder]"
+                      lineageId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output].Columns[NewDaySinceLastOrder]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Churn]"
+                      dataType="bool"
+                      name="Churn" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Tenure]"
+                      dataType="i8"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferredLoginDevice]"
+                      dataType="wstr"
+                      length="50"
+                      name="PreferredLoginDevice" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CityTier]"
+                      dataType="i8"
+                      name="CityTier" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[WarehouseToHome]"
+                      dataType="i8"
+                      name="WarehouseToHome" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferredPaymentMode]"
+                      dataType="wstr"
+                      length="50"
+                      name="PreferredPaymentMode" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[HourSpendOnApp]"
+                      dataType="i8"
+                      name="HourSpendOnApp" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NumberOfDeviceRegistered]"
+                      dataType="i8"
+                      name="NumberOfDeviceRegistered" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[PreferedOrderCat]"
+                      dataType="wstr"
+                      length="50"
+                      name="PreferedOrderCat" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[SatisfactionScore]"
+                      dataType="i8"
+                      name="SatisfactionScore" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[MaritalStatus]"
+                      dataType="wstr"
+                      length="50"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NumberOfAddress]"
+                      dataType="i8"
+                      name="NumberOfAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Complain]"
+                      dataType="bool"
+                      name="Complain" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[OrderAmountHikeFromlastYear]"
+                      dataType="numeric"
+                      name="OrderAmountHikeFromlastYear"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CouponUsed]"
+                      dataType="bool"
+                      name="CouponUsed" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[OrderCount]"
+                      dataType="i8"
+                      name="OrderCount" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[DaySinceLastOrder]"
+                      dataType="i8"
+                      name="DaySinceLastOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CashbackAmount]"
+                      dataType="numeric"
+                      name="CashbackAmount"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i8"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCustomerID]"
+                      dataType="i8"
+                      name="NewCustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewWarehouseToHome]"
+                      dataType="i8"
+                      name="NewWarehouseToHome" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewNumberOfDeviceRegistered]"
+                      dataType="i8"
+                      name="NewNumberOfDeviceRegistered" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewSatisfactionScore]"
+                      dataType="i8"
+                      name="NewSatisfactionScore" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewOrderAmountHikeFromlastYear]"
+                      dataType="numeric"
+                      name="NewOrderAmountHikeFromlastYear"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCashbackAmount]"
+                      dataType="numeric"
+                      name="NewCashbackAmount"
+                      precision="19"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewChurn]"
+                      dataType="bool"
+                      name="NewChurn" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewTenure]"
+                      dataType="i8"
+                      name="NewTenure" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewCityTier]"
+                      dataType="i8"
+                      name="NewCityTier" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewHourSpendOnApp]"
+                      dataType="i8"
+                      name="NewHourSpendOnApp" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewNumberOfAddress]"
+                      dataType="i8"
+                      name="NewNumberOfAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Copy of Complain]"
+                      dataType="bool"
+                      name="Copy of Complain" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[Copy of CouponUsed]"
+                      dataType="bool"
+                      name="Copy of CouponUsed" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewOrderCount]"
+                      dataType="i8"
+                      name="NewOrderCount" />
+                    <externalMetadataColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input].ExternalColumns[NewDaySinceLastOrder]"
+                      dataType="i8"
+                      name="NewDaySinceLastOrder" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Load into SQL Server (Loading Phase).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load from CSV\Load into SQL Server (Loading Phase).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load from CSV\Load into SQL Server (Loading Phase).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load from CSV.Paths[Data Conversion Output]"
+              endId="Package\Load from CSV\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Load from CSV\Data Conversion (Transform Phase).Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load from CSV.Paths[Derived Column Output]"
+              endId="Package\Load from CSV\Load into SQL Server (Loading Phase).Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load from CSV\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load from CSV.Paths[Flat File Source Output]"
+              endId="Package\Load from CSV\Data Conversion (Transform Phase).Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Load from CSV\Load from CSV (Extraction Phase).Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Load from CSV"
+          TopLeft="118,104" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load from CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Load from CSV\Data Conversion (Transform Phase)"
+          TopLeft="461.5,55.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load from CSV\Load into SQL Server (Loading Phase)"
+          TopLeft="182,189" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load from CSV\Load from CSV (Extraction Phase)"
+          TopLeft="155,62" />
+        <EdgeLayout
+          Id="Package\Load from CSV.Paths[Flat File Source Output]"
+          TopLeft="394,79.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.5,0"
+              Start="0,0"
+              End="60,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load from CSV\Derived Column"
+          TopLeft="597,218" />
+        <EdgeLayout
+          Id="Package\Load from CSV.Paths[Data Conversion Output]"
+          TopLeft="585,97.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89,120.5"
+              Start="0,0"
+              End="89,113">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.25"
+                    Point2="0,60.25"
+                    Point3="4,60.25" />
+                  <mssgle:LineSegment
+                    End="85,60.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85,60.25"
+                    Point2="89,60.25"
+                    Point3="89,64.25" />
+                  <mssgle:LineSegment
+                    End="89,113" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load from CSV.Paths[Derived Column Output]"
+          TopLeft="597,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-157,-29"
+              Start="0,0"
+              End="-149.5,-29">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-74.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.5,0"
+                    Point2="-78.5,0"
+                    Point3="-78.5,-4" />
+                  <mssgle:LineSegment
+                    End="-78.5,-25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.5,-25"
+                    Point2="-78.5,-29"
+                    Point3="-82.5,-29" />
+                  <mssgle:LineSegment
+                    End="-149.5,-29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load from CSV\Load into SQL Server (Loading Phase)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
